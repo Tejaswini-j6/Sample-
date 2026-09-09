@@ -433,4 +433,9 @@
   });
 
   renderCart();
+
+  const productQuery = new URLSearchParams(window.location.search).get("product");
+  if (productQuery) {
+    requestAnimationFrame(() => scrollToShop(productQuery));
+  }
 })();

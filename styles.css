@@ -66,8 +66,16 @@ a {
 
 img {
   max-width: 100%;
-  height: auto;
   display: block;
+}
+
+.hero-bg-img,
+.about-bg-img,
+.impact-bg-img {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 button {
@@ -675,16 +683,20 @@ body.nav-open .nav-toggle span:nth-child(3) {
    -------------------------------------------------------------------------- */
 .categories-section {
   padding: 30px 0 45px;
+  width: 100%;
 }
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
+  width: 100%;
 }
 
 .category-card {
   position: relative;
+  width: 100%;
+  min-width: 0;
   background-color: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: 12px;
@@ -775,6 +787,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
    -------------------------------------------------------------------------- */
 .products-section {
   padding: 25px 0 45px;
+  width: 100%;
 }
 
 .slider-arrows {
@@ -803,11 +816,14 @@ body.nav-open .nav-toggle span:nth-child(3) {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
+  width: 100%;
 }
 
 .product-card {
+  width: 100%;
+  min-width: 0;
   background-color: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: 12px;
